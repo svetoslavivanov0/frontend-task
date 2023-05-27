@@ -27,6 +27,50 @@ const store = createStore({
                 correctAnswer: 1,
                 selectedAnswer: null,
             },
+            {
+                id: 3,
+                title: 'Which country has the biggest population?',
+                options: [
+                    { id: 1, text: 'China' },
+                    { id: 2, text: 'India' },
+                    { id: 3, text: 'Russia' }
+                ],
+                correctAnswer: 1,
+                selectedAnswer: null,
+            },
+            {
+                id: 4,
+                title: 'What is the capital of Spain?',
+                options: [
+                    { id: 1, text: 'Madrid' },
+                    { id: 2, text: 'Barcelona' },
+                    { id: 3, text: 'Valencia' }
+                ],
+                correctAnswer: 1,
+                selectedAnswer: null,
+            },
+            {
+                id: 5,
+                title: 'What is the name of Manchester United\'s stadium?',
+                options: [
+                    { id: 1, text: 'Old Trafford' },
+                    { id: 2, text: 'Stamford Bridge' },
+                    { id: 3, text: 'Etihad' }
+                ],
+                correctAnswer: 1,
+                selectedAnswer: null,
+            },
+            {
+                id: 6,
+                title: 'How many EPL trophies does Manchester United has?',
+                options: [
+                    { id: 1, text: '20' },
+                    { id: 2, text: '19' },
+                    { id: 3, text: '18' }
+                ],
+                correctAnswer: 1,
+                selectedAnswer: null,
+            },
         ],
     },
     getters: {
