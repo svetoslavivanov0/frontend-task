@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <h2>Questionnaire</h2>
+
     <ol class="entries" v-if="questions.length">
       <question
           v-for="question in questions"
@@ -10,14 +11,13 @@
       />
     </ol>
 
-    <div class="actions">
-      <router-link
-          v-if="canShowFeedback"
-          to="/feedback"
-      >
-        View Feedback
-      </router-link>
-    </div>
+    <router-link
+        class="button"
+        v-if="canShowFeedback"
+        to="/feedback"
+    >
+      View Feedback
+    </router-link>
   </div>
 </template>
 

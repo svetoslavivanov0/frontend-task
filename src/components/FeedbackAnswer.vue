@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b>{{ question.title }}</b>
+    <b class="question">{{ question.title }}</b>
 
-    <p v-if="question.selectedAnswer">Correct answer - {{ getCorrectAnswerText }}</p>
+    <p class="answer" v-if="question.selectedAnswer">Correct answer - {{ getCorrectAnswerText }}</p>
 
     <span v-if="question.selectedAnswer">{{ question.correctAnswer === question.selectedAnswer ? 'Correct' : 'Wrong' }}</span>
   </div>

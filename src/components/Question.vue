@@ -23,9 +23,10 @@
         </label>
       </li>
     </ul>
+
     <button
         class="button"
-        :disabled="!selectedValue || disabled"
+        :disabled="disabled"
         @click="confirmAnswer(question)">
       Confirm
     </button>

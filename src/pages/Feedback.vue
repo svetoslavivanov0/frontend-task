@@ -2,14 +2,21 @@
   <div class="page">
     <h2>Answers</h2>
 
-    <div>
+    <div class="feedback">
       <feedback-answer
           :key="question.id"
           :question="question"
           v-for="question in questions"
       />
 
-      <a href="#" @click.prevent="reset">Reset</a>
+      <div
+          class="reset"
+          @click="reset"
+      >
+        <span>
+          Reset
+        </span>
+      </div>
     </div>
   </div>
 </template>
