@@ -62,11 +62,11 @@ const store = createStore({
             },
             {
                 id: 6,
-                title: 'How many EPL trophies does Manchester United has?',
+                title: 'Which is one the most famous sports?',
                 options: [
-                    { id: 1, text: '20' },
-                    { id: 2, text: '19' },
-                    { id: 3, text: '18' }
+                    { id: 1, text: 'Football' },
+                    { id: 2, text: 'Chess' },
+                    { id: 3, text: 'Handball' }
                 ],
                 correctAnswer: 1,
                 selectedAnswer: null,
