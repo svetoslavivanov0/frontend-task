@@ -41,11 +41,22 @@ const store = createStore({
                 ...state.questions[questionToUpdateIndex],
                 selectedAnswer: optionId,
             };
+        },
+        reset(state) {
+            state.questions = state.questions.map((question) => {
+                return {
+                    ...question,
+                    selectedAnswer: null,
+                }
+            });
         }
     },
     actions: {
         submitQuestion({commit}, answer) {
             commit('setAnswer', answer);
+        },
+        resetAnswers({commit}) {
+            commit('reset');
         }
     }
 });
