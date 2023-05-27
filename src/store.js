@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 
-// import router from './router';
+import router from './router';
 
 const store = createStore({
     state: {
@@ -49,6 +49,8 @@ const store = createStore({
                     selectedAnswer: null,
                 }
             });
+
+            router.push('/');
         }
     },
     actions: {
