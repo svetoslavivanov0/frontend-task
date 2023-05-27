@@ -65,7 +65,7 @@ $small: 920px;
         font-weight: 500;
       }
 
-      @media screen and(max-width: $small) {
+      @media screen and (max-width: $small) {
         max-width: 100%;
         text-align: center;
         display: block;
@@ -120,7 +120,7 @@ $small: 920px;
     }
   }
 
-  @media screen and(max-width: $small) {
+  @media screen and (max-width: $small) {
     padding: 20px;
   }
 }
