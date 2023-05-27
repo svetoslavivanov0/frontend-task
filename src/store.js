@@ -30,18 +30,22 @@ const store = createStore({
         ],
     },
     getters: {
-        canShowResults () {
-            return false;
-        },
-        selectedAnswers() {
-            return [];
+        canShowFeedback(state) {
+            return state.questions.filter(question => question.selectedAnswer !== null).length;
         }
     },
     mutations: {
+        setAnswer(state, { questionId, optionId }){
+            const questionToUpdateIndex = state.questions.findIndex(question => question.id === questionId);
+            state.questions[questionToUpdateIndex] = {
+                ...state.questions[questionToUpdateIndex],
+                selectedAnswer: optionId,
+            };
+        }
     },
     actions: {
-        submitQuestion() {
-            alert();
+        submitQuestion({commit}, answer) {
+            commit('setAnswer', answer);
         }
     }
 });
