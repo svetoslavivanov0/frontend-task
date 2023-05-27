@@ -23,7 +23,8 @@
 
 <script>
 import { useStore } from 'vuex';
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
+import router from '../router.js';
 import FeedbackAnswer from '../components/FeedbackAnswer.vue';
 
 export default {
@@ -33,6 +34,12 @@ export default {
   },
   setup() {
     const store = useStore();
+
+    onMounted(() => {
+      if (!store.getters.canShowFeedback) {
+        router.push('/');
+      }
+    })
 
     const reset = () => {
       store.dispatch('resetAnswers');
